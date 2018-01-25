@@ -47,7 +47,7 @@ In order to compile our *COVERAGE & ANISOTROPY TOOLKIT* you will need the C part
 ```
 ./doinstall
 ```
-The following message should be written:
+The following message should appear:
 ```
 Warning: The following directories could not be found:
 $HEALPIX_DIR/include
@@ -60,14 +60,14 @@ ln -s src/cxx/generic_gcc/bin bin
 ln -s src/cxx/generic_gcc/lib lib
 ln -s src/cxx/generic_gcc/include include
 ```
-Return in `$HEALPIX_DIR/src/C` and use the command `./doinstall`.
+Return in `$HEALPIX_DIR/src/C` and type `./doinstall`.
 
 You are then asked to enter the C compiler you want to use. `gcc` is the default one and is fine. Press `return`.  
 To choose the options for the compilation. `-O2 -Wall` is fine. Press `return`.  
 To enter the archive and indexing creation command. `ar -rsv is fine`. Press `return`.  
 To enter full name of CFITSIO library (`libcfitsio.a`). Press `return`.  
 To enter location of CFITSIO libray (`$HEALPIX_DIR/lib`). Press `return`.  
-To enter location of CFITSIO header cfitsio.h (usr/local/include). Enter `$HEALPIX_DIR/include`.  
+To enter location of CFITSIO header cfitsio.h (`usr/local/include`). Enter `$HEALPIX_DIR/include`.  
 A static library is produced by default. You are asked if you want a shared library too. Press `n`.
 
 
@@ -80,7 +80,7 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib)
 
 
 ## Install and compile STCoordinates
-Download from our web page STCoordinates.tar.gz and uncompress it. Define the environment variable `STC_DIR` in your .whatevershrc file pointing towards the directory where you uncompress it.
+Download from our web page STCoordinates.tar.gz and uncompress it. Define the environment variable `STC_DIR` in your .whatevershrc file pointing towards the directory where it has been uncompressed.
 ```
 cd $STC_DIR
 make
@@ -100,7 +100,7 @@ We joined some exe all called `example_*.exe` to show what can be done with the 
 ```
 doxygen doxyconf.txt
 ```
-and a doc/ directory will be created with the html documentation. To see it, you simply need to open the index.html file in doc/html/ with your web browser.
+and a `doc/` directory will be created with the html documentation. To see it, you simply need to open the index.html file in `doc/html/` with your web browser.
 
 
-NOTE : during the execution of the code, we have to create some temporary files in /tmp. So please, be sure you have the appropriate permissions in this directory and enough space.
+NOTE : during the execution of the code, we have to create some temporary files in `/tmp`. So please, be sure you have the appropriate permissions in this directory and enough space.
