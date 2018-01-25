@@ -10,11 +10,11 @@ You need various softwares to be able to compile our code :
 
 
 ## Install HEALPix and CFITSIO
-You can get the files from our web page but we recommend that you get it directly from HEALPix people by registering at the following URL: https://sourceforge.net/projects/healpix. Once you have uncompressed HEALPix (`tar -xzvf Healpix_2.13a.tar.gz`), define an environment variable in your .cshrc, .bashrc or .whatevershrc named HEALPIX_DIR giving the full path of the HEALPix directory. For instance for bash:
+HEALPix is available at https://sourceforge.net/projects/healpix. Once you have uncompressed the tarball (`tar -xzvf Healpix_2.13a.tar.gz`), define the HEALPIX_DIR environment variable in your `.bashrc`.
 ```
-export HEALPIX_DIR=/Users/yourself/.../Healpix_2.13a
+export HEALPIX_DIR=/users/.../Healpix_2.13a
 ```
-You need to copy the file cfitsio3240.tar.gz in `$HEALPIX_DIR/src/cxx/libcfitsio/`. This file can be downloaded on: http://heasarc.gsfc.nasa.gov/fitsio/ and must be placed in `$HEALPIX_DIR/src/cxx/libcfitsio/` as a tar.gz. Then, create the CFITSIO_DIR environment variable in your .whatevershrc. For instance for bash:
+You need to copy the file `cfitsio3240.tar.gz` in `$HEALPIX_DIR/src/cxx/libcfitsio/`. This file can be downloaded on: http://heasarc.gsfc.nasa.gov/fitsio/. Then, create the following environment variable in your `.bashrc`:
 ```
 export CFITSIO_DIR=$HEALPIX_DIR
 ```
@@ -72,24 +72,23 @@ A static library is produced by default. You are asked if you want a shared libr
 
 
 ## Install ROOT (available at https://root.cern.ch/)
-Don't ask me how to do it ...
-Don't forget to define your `ROOTSYS` environment variable. And also don't forget to add the `$ROOTSYS/lib` directory in your `LD_LIBRARY_PATH` environment variable, in your .bashrc file for instance, by adding in it:
+Don't forget to define your `ROOTSYS` environment variable. And also don't forget to add the `$ROOTSYS/lib` directory in your `LD_LIBRARY_PATH` environment variable, in your `.bashrc` file, for instance, by adding::
 ```
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ROOTSYS/lib)
 ```
 
 
 ## Install and compile STCoordinates
-Download from our web page STCoordinates.tar.gz and uncompress it. Define the environment variable `STC_DIR` in your .whatevershrc file pointing towards the directory where it has been uncompressed.
+Download from our web page `STCoordinates.tar.gz` and uncompress it. Define the environment variable `STC_DIR` in your .whatevershrc file pointing towards the directory where it has been uncompressed.
 ```
 cd $STC_DIR
 make
 ```
-it should create a file called libSTCoordinates.a.
+it should create a file named `libSTCoordinates.a`.
 
 
 ## Install the "COVERAGE & ANISOTROPY TOOLKIT"
-Go to our web page and download the file Toolkit-v3.0.tar.gz. If you have correctly set up the environment variables `$CFITSIO_DIR`, `$HEALPIX_DIR`, `$ROOTSYS` and `$STC_DIR` then you should just go into the directory where you uncompressed Toolkit-v3.0.tar.gz and type:
+Go to our web page and download the file `Toolkit-v3.0.tar.gz`. If you have correctly set up the environment variables `$CFITSIO_DIR`, `$HEALPIX_DIR`, `$ROOTSYS` and `$STC_DIR` then you should just go into the directory where you uncompressed `Toolkit-v3.0.tar.gz` and type:
 ```
 make
 ```
