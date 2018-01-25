@@ -23,14 +23,14 @@ In `$HEALPIX_DIR`, type :
 ./configure
 ```
 This scripts takes care of the configuration and compilation of the C, C++, F90 and IDL packages of the HEALPix distribution. You want to configure the HEALPix C++ package, and edit a Makefile so enter:
-``
+```
 4
-``
+```
 You are asked to set the configuration you want to use for the C++ compilation. If a recent version of gcc and g++ is installed on the system, `generic_gcc` should always work. Enter:
 ```
 2
 ```
-For the compilation, HEALPix needs to modify your .profile file, located in your home directory. Don't worry, just one line will be added at the end of your .profile file without any other modifications. Moreover, a copy of of your actual .profile file will be saved in your home directory as .profile.save. Enter:
+For the compilation, HEALPix needs to modify your .profile file, located in your home directory. Don't worry, just one line will be added at the end of your .profile file without any other modifications. Note that a copy of of your actual .profile file will be saved in your home directory as .profile.save. Enter:
 ```
 y
 ```
@@ -71,7 +71,7 @@ To enter location of CFITSIO header cfitsio.h (`usr/local/include`). Enter `$HEA
 A static library is produced by default. You are asked if you want a shared library too. Press `n`.
 
 
-## Install ROOT (https://root.cern.ch/)
+## Install ROOT (available at https://root.cern.ch/)
 Don't ask me how to do it ...
 Don't forget to define your `ROOTSYS` environment variable. And also don't forget to add the `$ROOTSYS/lib` directory in your `LD_LIBRARY_PATH` environment variable, in your .bashrc file for instance, by adding in it:
 ```
