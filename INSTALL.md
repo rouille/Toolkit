@@ -2,16 +2,15 @@
 February 25th, 2010
 
 You need various softwares to be able to compile our code :
-- CFITSIO : the FITS I/O library (C language). This is a world standard for astrophysics binary files. It basically consists in an ASCII header describing the rest of the file that is binary. You therefore just have to use the FITSIO routines to access files, without a prior knowledge of the file content, which is cool. HEALPix uses this standard.
-- HEALPix : this is the sky pixelization that we use in our *COVERAGE & ANISOTROPY TOOLKIT*. It is the standard in the CMB community and has many advantages : iso-surface pixels regularly spaced at a given latitude allowing Harmonic transform to be almost replaced by Fast Fourier Transforms.
-- ROOT : well you know it ...
-- STCoordinates : part of the CDAS software where coordinate system functions are coded.
+- CFITSIO: the FITS I/O library (C language). This is a world standard for astronomy binary files. It basically consists in an ASCII header describing the rest of the file that is binary. You therefore just have to use the FITSIO routines to access files, without a prior knowledge of the file content, which is cool. HEALPix uses this standard.
+- HEALPix: this is the sky pixelization that we use in our *COVERAGE & ANISOTROPY TOOLKIT*. It is the standard in the CMB community and has many advantages : iso-surface pixels regularly spaced at a given latitude allowing Harmonic transform to be almost replaced by Fast Fourier Transforms.
+- ROOT: well you know it ...
+- STCoordinates: part of the CDAS software where coordinate system functions are coded.
 - Our *COVERAGE & ANISOTROPY TOOLKIT*
 
 
 ## Install HEALPix and CFITSIO
-You can get the files from our web page but we recommend that you get it directly from HEALPix people by registering at the following URL: http://healpix.jpl.nasa.gov/healpixSoftwareGetHealpix.shtml. Once you have uncompressed HEALPix (`tar -xzvf Healpix_2.13a.tar.gz`), define an environment variable in your
-.cshrc, .bashrc or .whatevershrc named HEALPIX_DIR giving the full path of the HEALPix directory. For instance for bash:
+You can get the files from our web page but we recommend that you get it directly from HEALPix people by registering at the following URL: https://sourceforge.net/projects/healpix. Once you have uncompressed HEALPix (`tar -xzvf Healpix_2.13a.tar.gz`), define an environment variable in your .cshrc, .bashrc or .whatevershrc named HEALPIX_DIR giving the full path of the HEALPix directory. For instance for bash:
 ```
 export HEALPIX_DIR=/Users/yourself/.../Healpix_2.13a
 ```
@@ -86,7 +85,7 @@ Download from our web page STCoordinates.tar.gz and uncompress it. Define the en
 cd $STC_DIR
 make
 ```
-it should create a file called libSTCoordinates.a
+it should create a file called libSTCoordinates.a.
 
 
 ## Install the "COVERAGE & ANISOTROPY TOOLKIT"
@@ -97,8 +96,7 @@ make
 
 
 ## Get started
-We joined some exe all called `example_*.exe` to show what can be done with the *COVERAGE & ANISOTROPY TOOLKIT*. This programs are thoroughly documented. In addition, the information on the functions used in our code are available on the web site through a DOXYGEN documentation. We also provide the DOXYGEN configuration file (doxyconf.txt) so
-you can easily produce this documentation in your *COVERAGE & ANISOTROPY TOOLKIT* directory. If you have DOXYGEN installed on your machine just do:
+We joined some exe all called `example_*.exe` to show what can be done with the *COVERAGE & ANISOTROPY TOOLKIT*. This programs are thoroughly documented. In addition, the information on the functions used in our code are available on the web site through a DOXYGEN documentation. We also provide the DOXYGEN configuration file (doxyconf.txt) so you can easily produce this documentation in your *COVERAGE & ANISOTROPY TOOLKIT* directory. If you have DOXYGEN installed on your machine just do:
 ```
 doxygen doxyconf.txt
 ```
